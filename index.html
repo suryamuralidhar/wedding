@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wedding</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playwrite+IE&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="wrapper">
+    <div class="card">
+
+      <img src="couple.jpg" class="hero" />
+
+      <h1>Johnlee & Gisha</h1>
+      <p>8th April 2026</p>
+
+      <button class="btn primary" onclick="showGuide()">
+        📷 Upload Photos
+      </button>
+
+      <a href="https://photos.app.goo.gl/mRWmaaWXsrgXnKgM9" target="_blank" class="btn secondary">
+        📷 Go to Album
+      </a>
+
+    </div>
+  </div>
+
+  <!-- GUIDE -->
+  <div id="guideOverlay">
+
+    <div class="guide-container">
+      <img src="guide.png" class="guide-img">
+
+      <div class="ripple"></div>
+      <div class="arrow"></div>
+      <div class="arrow1"></div>
+    </div>
+     <div class="label">👉 Click this Button to Upload</div>
+    
+
+  </div>
+
+  <script>
+    function showGuide() {
+      document.getElementById("guideOverlay").style.display = "flex";
+
+      setTimeout(() => {
+        window.open("https://photos.app.goo.gl/mRWmaaWXsrgXnKgM9", "_blank");
+      }, 3000);
+    }
+  </script>
+
+</body>
+</html>
